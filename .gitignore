@@ -1,0 +1,9 @@
+.vs
+*.sln
+.p4ignore
+.p4ignore.bak
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
