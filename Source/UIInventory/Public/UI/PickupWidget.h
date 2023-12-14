@@ -16,7 +16,7 @@ class UIINVENTORY_API UPickupWidget : public UUserWidget
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AActor* PickupActorRef;
+	AActor* PickupActor;
 
 protected:
 	virtual void NativeConstruct() override;

@@ -11,11 +11,11 @@ void UPickupWidget::NativeConstruct()
 
 void UPickupWidget::ShowWidgetByDistance(float Distance)
 {
-    if (PickupActorRef)
+    if (PickupActor)
     {
-        if (auto PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0))
+        if (APlayerController* PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0))
         {
-            FVector WorldLocation = PickupActorRef->GetActorLocation() + FVector(0.f, 0.f, Distance);
+            FVector WorldLocation = PickupActor->GetActorLocation() + FVector(0.f, 0.f, Distance);
             FVector2D Position;
             if (PlayerController->ProjectWorldLocationToScreen(WorldLocation, Position))
             {
