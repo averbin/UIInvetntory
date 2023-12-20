@@ -8,6 +8,7 @@
 #include "CharacterBase.generated.h"
 
 class UInventoryStruct;
+class UArrowComponent;
 
 UCLASS()
 class UIINVENTORY_API ACharacterBase : public ACharacter
@@ -24,6 +25,16 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	TArray<UInventoryStruct*> Inventory;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category=Stats)
+	float HealthValue{ 0.75f };
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Stats)
+	float EnergyValue{ .5f };
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Stats)
+	float MoodValue{ .25f };
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Components)
+	UArrowComponent* DropArrowComponent;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
