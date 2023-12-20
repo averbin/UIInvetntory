@@ -12,7 +12,7 @@ public class UIInventory : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore", "FacialAnimation" });
 
-		PublicIncludePaths.AddRange(new string[] { "UIInventory/Public/UI" });
+		PublicIncludePaths.AddRange(new string[] { "UIInventory/Public/UI" , "UIInventory/Public/Player" });
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
