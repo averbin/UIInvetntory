@@ -25,7 +25,7 @@ public:
 	FSlateBrush GetInventoryImage() const;
 
 	FOnSlotButtonClickedSendIndex OnSendButtonIndex;
-	
+
 protected:
 	void NativeConstruct() override;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)

@@ -6,6 +6,9 @@
 #include "Blueprint/UserWidget.h"
 #include "GameHUD.generated.h"
 
+class UInventorySlot;
+class UButton;
+
 /**
  * 
  */
@@ -14,4 +17,12 @@ class UIINVENTORY_API UGameHUD : public UUserWidget
 {
 	GENERATED_BODY()
 
+protected:
+	virtual void NativeConstruct() override;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite)
+	TArray<UInventorySlot*> Buttons;
+
+private:
+	APlayerController* PlayerController;
 };
